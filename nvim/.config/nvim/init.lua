@@ -232,5 +232,12 @@ require("lazy").setup({
   },
 })
 
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    vim.cmd("wincmd _")
+    vim.cmd("startinsert")
+  end,
+})
+
 -- Pick your default theme
 vim.cmd.colorscheme("kanagawa")
