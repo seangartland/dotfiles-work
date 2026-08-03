@@ -241,3 +241,26 @@ vim.api.nvim_create_autocmd("TermOpen", {
 
 -- Pick your default theme
 vim.cmd.colorscheme("kanagawa")
+
+-- Let Ghostty's transparent background show through Neovim.
+local transparent_groups = {
+  "Normal",
+  "NormalNC",
+  "SignColumn",
+  "FoldColumn",
+  "EndOfBuffer",
+  "MsgArea",
+  "NormalFloat",
+  "FloatBorder",
+}
+
+local function set_transparent_background()
+  for _, group in ipairs(transparent_groups) do
+    vim.api.nvim_set_hl(0, group, { bg = "none" })
+  end
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = set_transparent_background,
+})
+set_transparent_background()

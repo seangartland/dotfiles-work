@@ -1,0 +1,8 @@
+# Let the desktop/background show subtly through terminal windows.
+background-opacity = 0.86
+
+# Keep transparency visible when apps such as Neovim paint their own background.
+background-opacity-cells = true
+
+# Soften what shows through the window (macOS/Linux compositors that support it).
+background-blur = 20

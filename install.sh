@@ -7,6 +7,10 @@ mkdir -p "$HOME/.config"
 ln -sfn "$ROOT/nvim/.config/nvim" "$HOME/.config/nvim"
 printf '%s\n' "Linked Neovim config to $HOME/.config/nvim"
 
+mkdir -p "$HOME/.config/ghostty"
+ln -sfn "$ROOT/ghostty/.config/ghostty/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
+printf '%s\n' "Linked Ghostty config to $HOME/.config/ghostty/config.ghostty"
+
 if command -v brew >/dev/null 2>&1; then
   brew install fzf-tab zsh-autosuggestions zsh-syntax-highlighting
 else

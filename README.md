@@ -8,6 +8,7 @@ hosts, credentials, work-only paths) stay in each machine's own untracked
 This repo currently includes:
 
 - Neovim config in `nvim/.config/nvim/`
+- Ghostty config in `ghostty/.config/ghostty/`
 - Shared zsh completion config in `zsh/completion.zsh`
 
 ## Install on a new machine
